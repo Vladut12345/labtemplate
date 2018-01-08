@@ -1,20 +1,20 @@
 "use strict";
 
-const car = require('../models').car;
+const Car = require('../models').Car;
 
 exports.list = function (req, res) {
-  car.findAll().then(car => {
-    res.jsonp(car);
+  Car.findAll().then(Car => {
+    res.jsonp(Car);
   });
 };
 
 exports.create = function (req, res) {
-  res.jsonp(car.create(req.body));
+  res.jsonp(Car.create(req.body));
 };
 
 exports.findById = function (req, res) {
   let id = req.params.id;
-  car.findById(id).then(car => {
-    res.jsonp(car);
+  Car.findById(id).then(Car => {
+    res.jsonp(Car);
   });
 };
