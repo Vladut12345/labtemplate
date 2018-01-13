@@ -18,3 +18,28 @@ exports.findById = function (req, res) {
     res.jsonp(Car);
   });
 };
+
+exports.update = function (req, res) {
+  let id = req.params.id;
+  Car.findById(id).then(Car => {
+    Car.update(req.body);
+  });
+  res.jsonp(Car);
+};
+
+exports.delete = function (req, res) {
+  let id = req.params.id;
+  Car.findById(req.params.id)
+    .then(Car => {
+      if (!Car) {
+        return res.status(400).send({
+          message: 'Car Not Found',
+        });
+      }
+      return Car
+        .destroy()
+        .then(() => res.status(204).send())
+        .catch(error => res.status(400).send(error));
+    })
+    .catch(error => res.status(400).send(error));
+};
