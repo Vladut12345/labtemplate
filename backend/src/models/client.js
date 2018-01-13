@@ -1,9 +1,10 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  var Car = sequelize.define('Car', {
-    model: DataTypes.STRING,
-    marca: DataTypes.STRING,
-    avalable:DataTypes.INTEGER
+  var Client = sequelize.define('Client', {
+    username: DataTypes.STRING,
+    password: DataTypes.STRING,
+    fullName: DataTypes.STRING,
+    idCar: DataTypes.INTEGER
   }, {
     classMethods: {
       associate: function(models) {
@@ -11,5 +12,5 @@ module.exports = (sequelize, DataTypes) => {
       }
     }
   });
-  return Car;
+  return Client;
 };

@@ -8,8 +8,14 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      type: {
+      model: {
         type: Sequelize.STRING
+      },
+      marca: {
+        type: Sequelize.STRING
+      },
+      avalable: {
+        type: Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,

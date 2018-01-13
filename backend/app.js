@@ -27,11 +27,14 @@ var index = require('./src/rest/index');
 var user = require('./src/rest/user');
 var car = require('./src/rest/car');
 var address = require('./src/rest/address');
+var client = require('./src/rest/client');
+
 
 app.use('/api', index);
 app.use('/api/user', user);
 app.use('/api/car', car);
 app.use('/api/address', address);
+app.use('/api/client', client);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
