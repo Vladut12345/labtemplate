@@ -14,18 +14,21 @@ import { AppRoutingModule } from './app-routing.module';
 
 // Components
 import { AppComponent } from './app.component';
-import { HomeComponent, NavbarComponent } from './components';
+import { HomeComponent } from './components';
 
 // used to create fake backend
 import { fakeBackendProvider } from './service';
 import { MockBackend, MockConnection } from '@angular/http/testing';
 import { BaseRequestOptions } from '@angular/http';
+import { CarComponent } from './components/components/car/car.component';
+import { CarPageComponent } from './components/pages/car-page/car-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    NavbarComponent
+    CarComponent,
+    CarPageComponent
   ],
   imports: [
     AppRoutingModule,

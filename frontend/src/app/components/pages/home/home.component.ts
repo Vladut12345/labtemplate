@@ -6,13 +6,19 @@ import { ApiService } from '../../../service/';
   styleUrls: ['./home.component.less']
 })
 export class HomeComponent implements OnInit {
-  user: String;
+  cars: Array<Object> = [];
+
   constructor(private apiService: ApiService) { }
 
   ngOnInit() {
-    this.apiService.get('api/user/1').subscribe(res => {
-      this.user = res.firstName;
-    });
+    // this.apiService.get('api/user/1').subscribe(res => {
+    //   this.user = res.firstName;
+    // });
+    this.cars.push({id: 3, nume: "BMV", pret: 95.6});
+    this.cars.push({id: 3, nume: "Mercedes", pret: 85.6});
+    this.cars.push({id: 3, nume: "Ceva", pret: 36.6});
+    this.cars.push({id: 3, nume: "Ceva", pret: 36.6});
+    console.log(this.cars);
   }
 
 }
