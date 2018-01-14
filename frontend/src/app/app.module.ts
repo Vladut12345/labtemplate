@@ -27,6 +27,7 @@ import { SpecialsComponent } from './specials/specials.component';
 import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
 import { AboutComponent } from './about/about.component';
+import { LoginHeadComponent } from './login-head/login-head.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { AboutComponent } from './about/about.component';
     SpecialsComponent,
     ContactComponent,
     LoginComponent,
-    AboutComponent
+    AboutComponent,
+    LoginHeadComponent
   ],
   imports: [
     AppRoutingModule,
