@@ -10,7 +10,8 @@ export class CarComponent implements OnInit {
   @Input() car: {
     id: number,
     nume: string,
-    pret: number
+    pret: number,
+    img: HTMLImageElement
   }
 
   constructor() { }
