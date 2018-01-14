@@ -6,7 +6,8 @@ div.gallery {
     float: left;
     width: 380px;
 	padding-top: 10px;
-	margin-top:50px;
+    margin-top:50px;
+    margin-right: 80px;
 	
 	
 }
@@ -24,7 +25,7 @@ div.gallery img {
 div.desc {
     padding: 15px;
     text-align: center;
-	color: white;
+	color: black;
 	font-size:30px;
 }
 
