@@ -7,7 +7,6 @@ import { ApiService } from '../../../service/';
 })
 export class HomeComponent implements OnInit {
   cars: Array<Object> = [];
-  images:any[];
   
 
   constructor(private apiService: ApiService) { }

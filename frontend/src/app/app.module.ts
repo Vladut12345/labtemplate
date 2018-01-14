@@ -22,13 +22,19 @@ import { MockBackend, MockConnection } from '@angular/http/testing';
 import { BaseRequestOptions } from '@angular/http';
 import { CarComponent } from './components/components/car/car.component';
 import { CarPageComponent } from './components/pages/car-page/car-page.component';
+import { LoginFormComponent } from './login-form/login-form.component';
+import { SpecialsComponent } from './specials/specials.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CarComponent,
-    CarPageComponent
+    CarPageComponent,
+    LoginFormComponent,
+    SpecialsComponent,
+    ContactComponent
   ],
   imports: [
     AppRoutingModule,
