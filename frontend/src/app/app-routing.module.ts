@@ -1,6 +1,7 @@
 
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+
+import { RouterModule , Routes} from '@angular/router';
 import { HomeComponent } from './components';
 import { CarPageComponent } from './components/pages/car-page/car-page.component'
 import { LoginFormComponent } from './login-form/login-form.component';
@@ -25,7 +26,8 @@ const routes: Routes = [
   },
   {
     path: 'login', component: LoginComponent
-  }
+  },
+  
 
   // otherwise redirect to home
   // { path: '**', redirectTo: '/' }
