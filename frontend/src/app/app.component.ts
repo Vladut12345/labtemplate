@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
     './app.component.less',
     //'../assets/css/flexslider.css',
     //'../assets/css/global.css',
-   //'../assets/css/style.css',
+   '../assets/css/style.css',
   ]
 })
 
