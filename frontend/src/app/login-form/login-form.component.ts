@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../service/';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-login-form',
@@ -6,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./login-form.component.less']
 })
 export class LoginFormComponent implements OnInit {
-
+cients: Client[];
   constructor(
     private router: Router
     ){} 
@@ -20,7 +21,7 @@ export class LoginFormComponent implements OnInit {
     var username = e.currentTarget.elements[0].value;
     var password = e.currentTarget.elements[1].value;
  
-    if(username == "admin"&& password == "admin")
+    if(username == this.apiService.get('api/client/').subscripbe(res=>{this.clients=res;})&& password == "admin")
     {
       this.router.navigate(['home']);
     }

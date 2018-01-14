@@ -28,6 +28,7 @@ import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
 import { AboutComponent } from './about/about.component';
 import { LoginHeadComponent } from './login-head/login-head.component';
+import { ClientComponent } from './components/client/client.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { LoginHeadComponent } from './login-head/login-head.component';
     ContactComponent,
     LoginComponent,
     AboutComponent,
-    LoginHeadComponent
+    LoginHeadComponent,
+    ClientComponent
   ],
   imports: [
     AppRoutingModule,
