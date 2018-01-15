@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=MainSudut
+comment1.params=a
+comment1.target=int\ norm180(int)
+comment2.params=a
+comment2.target=int\ norm360(int)
+comment3.params=sudut1\ sudut2
+comment3.target=int\ getDirection(int,\ int)
+numComments=4

@@ -1,0 +1,230 @@
+#VRML V2.0 utf8
+
+Transform {
+  translation 0 0 -3.5
+  children Shape {
+    appearance Appearance {
+      material Material {
+        diffuseColor 0 1 0
+      }
+	  texture ImageTexture{
+	  url "e1.jpg"
+	  }
+    }
+    geometry Box { size 2 2 2 }
+  }
+  
+  
+}Transform {
+  translation 0 2 -3.5
+  children Shape {
+    appearance Appearance {
+      material Material {
+        diffuseColor 0 0 1
+      }
+	  texture ImageTexture{
+	  url "e2.jpg"
+	  }
+    }
+    geometry Box { size 2 2 2 }
+  }
+}
+
+
+Transform {
+  translation 0 4 -3.5
+  children Shape {
+    appearance Appearance {
+      material Material {
+        diffuseColor 1 0 0
+      }
+	  texture ImageTexture{
+	  url "e3.jpeg"
+	  }
+    }
+    geometry Box { size 2 2 2 }
+  }
+}
+Transform {
+  translation 0 6 -3.5
+  children Shape {
+    appearance Appearance {
+      material Material {
+        diffuseColor 0 1 1
+      }
+	  texture ImageTexture{
+	  url "e4.jpg"
+	  }
+    }
+    geometry Box { size 2 2 2 }
+  }
+}
+
+Transform {
+  translation 0 8 -3.5
+  children Shape {
+    appearance Appearance {
+      material Material {
+        diffuseColor 0 0 1
+      }
+	  texture ImageTexture{
+	  url "e5.jpg"
+	  }
+    }
+    geometry Box { size 2 2 2 }
+  }
+}
+
+Transform {
+  translation 0 10 -3.5
+  children Shape {
+    appearance Appearance {
+      material Material {
+        diffuseColor 1 0 1
+      }
+	  texture ImageTexture{
+	  url "e6.jpg"
+	  }
+    }
+    geometry Box { size 2 2 2 }
+  }
+}
+Transform {
+  translation 0 12 -3.5
+  children Shape {
+    appearance Appearance {
+      material Material {
+        diffuseColor 1 0 1
+      }
+	  texture ImageTexture{
+	  url "e7.jpg"
+	  }
+    }
+    geometry Box { size 2 2 2 }
+  }
+}
+Transform {
+  translation 0 14 -3.5
+  children Shape {
+    appearance Appearance {
+      material Material {
+        diffuseColor 1 0 1
+      }
+	  texture ImageTexture{
+	  url "e8.jpg"
+	  }
+    }
+    geometry Box { size 2 2 2 }
+  }
+}
+Transform {
+  translation 0 16 -3.5
+  children Shape {
+    appearance Appearance {
+      material Material {
+        diffuseColor 1 0 1
+      }
+	  texture ImageTexture{
+	  url "e9.jpg"
+	  }
+    }
+    geometry Box { size 2 2 2 }
+  }
+}
+
+Transform {
+  translation -1 0 0
+  children Shape {
+    appearance Appearance {
+      material Material {
+        diffuseColor 1 0 1
+      }
+	  texture ImageTexture{
+	  url "e9.jpg"
+	  }
+    }
+    geometry Box { size 0.1 2 5 }
+  }
+}
+Transform {
+  translation 1 0 0
+  children Shape {
+    appearance Appearance {
+      material Material {
+        diffuseColor 1 0 1
+      }
+	  texture ImageTexture{
+	  url "e9.jpg"
+	  }
+    }
+    geometry Box { size 0.1 2 5 }
+  }
+}
+
+Transform {
+  translation -1 2 0
+  children Shape {
+    appearance Appearance {
+      material Material {
+        diffuseColor 1 0 1
+      }
+	  texture ImageTexture{
+	  url "e9.jpg"
+	  }
+    }
+    geometry Box { size 0.1 2 5 }
+  }
+}
+Transform {
+  translation 1 2 0
+  children Shape {
+    appearance Appearance {
+      material Material {
+        diffuseColor 1 0 1
+      }
+	  texture ImageTexture{
+	  url "e9.jpg"
+	  }
+    }
+    geometry Box { size 0.1 2 5 }
+  }
+}
+
+ImageTexture {
+	url []
+	repeatS TRUE
+	repeatT TRUE
+}
+  
+
+Group {
+  children [
+    DEF ETransform Transform {
+      children [
+        DEF EViewpoint Viewpoint { jump FALSE }
+        DEF EProximity ProximitySensor { size 2 5 5 }
+        Transform {
+          translation 0 -1 0
+          children Shape {
+            appearance Appearance {
+              material Material { }
+            }
+            geometry Box { size 2 0.2 5 }
+          }
+        }
+      ]
+    }
+  ]
+}
+
+DEF ElevatorPI PositionInterpolator {
+  key [ 0, 1 ]
+  keyValue [ 0 0 0, 0 16 0 ] 
+}
+
+DEF TS TimeSensor { cycleInterval 10 } 
+
+ROUTE EProximity.enterTime TO TS.startTime
+ROUTE TS.isActive TO EViewpoint.set_bind
+ROUTE TS.fraction_changed TO ElevatorPI.set_fraction
+ROUTE ElevatorPI.value_changed TO ETransform.set_translation

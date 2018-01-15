@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Airplane
+comment1.params=Space
+comment1.target=void\ addedToWorld(greenfoot.World)
+comment2.params=
+comment2.target=void\ move()
+comment3.params=
+comment3.target=void\ fire()
+comment4.params=
+comment4.target=void\ Destr()
+comment5.params=
+comment5.target=void\ act()
+numComments=6
